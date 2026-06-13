@@ -1,0 +1,200 @@
+module.exports = [
+  {
+    name: "Amber Fort",
+    location: "Jaipur",
+    state: "Rajasthan",
+    region: "North India",
+    category: "history",
+    description: "A grand hilltop fort known for Rajput architecture, courtyards, and panoramic city views.",
+    bestSeason: "October to March",
+    imageUrl: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Amber+Fort+Jaipur"
+  },
+  {
+    name: "Hawa Mahal",
+    location: "Jaipur",
+    state: "Rajasthan",
+    region: "North India",
+    category: "history",
+    description: "A honeycomb-shaped palace facade that glows beautifully in the morning light.",
+    bestSeason: "October to March",
+    imageUrl: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Hawa+Mahal+Jaipur"
+  },
+  {
+    name: "Udaipur City Palace",
+    location: "Udaipur",
+    state: "Rajasthan",
+    region: "North India",
+    category: "history",
+    description: "A lakeside palace complex with ornate balconies, courtyards, and royal museum galleries.",
+    bestSeason: "September to March",
+    imageUrl: "https://images.unsplash.com/photo-1590766940554-634a7ed41450?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=City+Palace+Udaipur"
+  },
+  {
+    name: "Dal Lake",
+    location: "Srinagar",
+    state: "Jammu and Kashmir",
+    region: "North India",
+    category: "nature",
+    description: "A serene lake famous for shikara rides, floating markets, and mountain scenery.",
+    bestSeason: "April to October",
+    imageUrl: "https://images.unsplash.com/photo-1627894483226-6f76859d5d3e?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Dal+Lake+Srinagar"
+  },
+  {
+    name: "Gateway of India",
+    location: "Mumbai",
+    state: "Maharashtra",
+    region: "West India",
+    category: "history",
+    description: "An iconic waterfront monument and one of the most recognized landmarks in Mumbai.",
+    bestSeason: "November to February",
+    imageUrl: "https://images.unsplash.com/photo-1566552881560-0be862a7c445?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Gateway+of+India+Mumbai"
+  },
+  {
+    name: "Ajanta Caves",
+    location: "Aurangabad",
+    state: "Maharashtra",
+    region: "West India",
+    category: "history",
+    description: "Ancient rock-cut Buddhist caves celebrated for murals, carvings, and archaeology.",
+    bestSeason: "November to March",
+    imageUrl: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Ajanta+Caves"
+  },
+  {
+    name: "Tarkarli Beach",
+    location: "Malvan",
+    state: "Maharashtra",
+    region: "West India",
+    category: "beach",
+    description: "A clear-water beach destination popular for snorkeling, boat rides, and coastal stays.",
+    bestSeason: "October to March",
+    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Tarkarli+Beach"
+  },
+  {
+    name: "Meenakshi Temple",
+    location: "Madurai",
+    state: "Tamil Nadu",
+    region: "South India",
+    category: "spiritual",
+    description: "A vibrant temple complex admired for towering gopurams, sculpture, and living heritage.",
+    bestSeason: "October to March",
+    imageUrl: "https://images.unsplash.com/photo-1612278675615-9e4ccf4e7d4e?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Meenakshi+Temple+Madurai"
+  },
+  {
+    name: "Marina Beach",
+    location: "Chennai",
+    state: "Tamil Nadu",
+    region: "South India",
+    category: "beach",
+    description: "A long urban beach known for breezy evenings, local street food, and sunrise walks.",
+    bestSeason: "November to February",
+    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Marina+Beach+Chennai"
+  },
+  {
+    name: "Mysore Palace",
+    location: "Mysuru",
+    state: "Karnataka",
+    region: "South India",
+    category: "history",
+    description: "A royal palace with ornate interiors, evening illumination, and rich cultural significance.",
+    bestSeason: "July to February",
+    imageUrl: "https://images.unsplash.com/photo-1583396618422-7acc7f80f3cb?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Mysore+Palace"
+  },
+  {
+    name: "Bandipur National Park",
+    location: "Chamarajanagar",
+    state: "Karnataka",
+    region: "South India",
+    category: "wildlife",
+    description: "A forested tiger reserve with safari routes, elephants, deer, and rich biodiversity.",
+    bestSeason: "October to May",
+    imageUrl: "https://images.unsplash.com/photo-1516934024742-b461fba47600?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Bandipur+National+Park"
+  },
+  {
+    name: "Marine Drive",
+    location: "Kochi",
+    state: "Kerala",
+    region: "South India",
+    category: "city",
+    description: "A scenic promenade ideal for evening walks, local snacks, and backwater views.",
+    bestSeason: "September to March",
+    imageUrl: "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Marine+Drive+Kochi"
+  },
+  {
+    name: "Munnar Tea Gardens",
+    location: "Munnar",
+    state: "Kerala",
+    region: "South India",
+    category: "nature",
+    description: "Rolling tea estates, misty hills, and fresh mountain air make this a calm retreat.",
+    bestSeason: "September to May",
+    imageUrl: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Munnar+Tea+Gardens"
+  },
+  {
+    name: "Varkala Cliff Beach",
+    location: "Varkala",
+    state: "Kerala",
+    region: "South India",
+    category: "beach",
+    description: "A dramatic cliffside beach with cafes, sea breezes, and sunset viewpoints.",
+    bestSeason: "October to March",
+    imageUrl: "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Varkala+Cliff+Beach"
+  },
+  {
+    name: "Kaziranga National Park",
+    location: "Golaghat",
+    state: "Assam",
+    region: "North East India",
+    category: "wildlife",
+    description: "A UNESCO-listed national park known for one-horned rhinoceroses and elephant safaris.",
+    bestSeason: "November to April",
+    imageUrl: "https://images.unsplash.com/photo-1549366021-9f761d450615?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Kaziranga+National+Park"
+  },
+  {
+    name: "Nohkalikai Falls",
+    location: "Cherrapunji",
+    state: "Meghalaya",
+    region: "North East India",
+    category: "nature",
+    description: "A dramatic plunge waterfall surrounded by lush cliffs and monsoon-carved valleys.",
+    bestSeason: "October to May",
+    imageUrl: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Nohkalikai+Falls"
+  },
+  {
+    name: "Taj Mahal",
+    location: "Agra",
+    state: "Uttar Pradesh",
+    region: "North India",
+    category: "history",
+    description: "An iconic marble monument celebrated for Mughal architecture, symmetry, and timeless heritage.",
+    bestSeason: "October to March",
+    imageUrl: "https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Taj+Mahal+Agra"
+  },
+  {
+    name: "Radhanagar Beach",
+    location: "Havelock Island",
+    state: "Andaman and Nicobar Islands",
+    region: "Island Escapes",
+    category: "beach",
+    description: "A white-sand beach loved for turquoise water, sunsets, and a calm tropical atmosphere.",
+    bestSeason: "November to April",
+    imageUrl: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    mapsUrl: "https://maps.google.com/?q=Radhanagar+Beach"
+  }
+];

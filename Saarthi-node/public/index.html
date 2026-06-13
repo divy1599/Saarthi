@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saarthi | Find Amazing Places Nearby</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="page-shell">
+        <header class="topbar">
+            <div class="brand-block">
+                <p class="eyebrow">Saarthi Travel Discovery</p>
+                <h2 class="brand-mark">Saarthi</h2>
+                <p class="brand-native">सारथी</p>
+            </div>
+
+            <div class="auth-actions">
+                <span id="userChip" class="user-chip hidden"></span>
+                <button id="loginButton" class="ghost-button" type="button">Login</button>
+                <button id="registerButton" class="primary-button" type="button">Register</button>
+                <button id="logoutButton" class="ghost-button hidden" type="button">Logout</button>
+            </div>
+        </header>
+
+        <section class="hero">
+            <div class="hero-copy">
+                <p class="hero-native">Saarthi | सारथी</p>
+                <h1>
+                    Turn every city into your next
+                    <span class="headline-accent">unforgettable escape.</span>
+                </h1>
+                <p class="hero-text">
+                    Browse destinations state by state, uncover more handpicked spots across India,
+                    and check live weather before you lock in the perfect plan.
+                </p>
+
+                <form class="search-panel" id="searchForm">
+                    <label class="field">
+                        <span>Search by city or state</span>
+                        <input id="locationInput" name="location" type="text" placeholder="Try Jaipur, Kerala, Assam..." />
+                    </label>
+
+                    <label class="field">
+                        <span>Category</span>
+                        <select id="categoryInput" name="category">
+                            <option value="">All categories</option>
+                            <option value="history">History</option>
+                            <option value="nature">Nature</option>
+                            <option value="beach">Beach</option>
+                            <option value="spiritual">Spiritual</option>
+                            <option value="wildlife">Wildlife</option>
+                            <option value="city">City</option>
+                        </select>
+                    </label>
+
+                    <button class="search-button" type="submit">Explore Places</button>
+                </form>
+
+                <div class="hero-highlights">
+                    <span>State-wise discovery</span>
+                    <span>Fresh live weather</span>
+                    <span>Maps-ready planning</span>
+                    <span>Personal account access</span>
+                </div>
+
+                <div class="live-location-card">
+                    <div>
+                        <p class="live-location-label">Your live zone</p>
+                        <p id="userLocationLabel" class="live-location-value">Detecting your location...</p>
+                    </div>
+                    <p id="userLocationWeather" class="live-location-weather">Weather will appear here once GPS is available.</p>
+                </div>
+            </div>
+
+            <aside class="hero-card">
+                <p class="card-label">New in Saarthi</p>
+                <h2>Plan smarter, browse deeper</h2>
+                <p>
+                    Compare destinations by state, sign in to personalize your journey, and spot
+                    everything from forts and temples to waterfalls, beaches, and wildlife escapes.
+                </p>
+                <div class="mini-tags">
+                    <span>Rajasthan</span>
+                    <span>Kerala</span>
+                    <span>Assam</span>
+                    <span>Tamil Nadu</span>
+                </div>
+            </aside>
+        </section>
+
+        <section class="contribute-section">
+            <div class="contribute-copy">
+                <p class="eyebrow">Structured Database</p>
+                <h2>Add a new destination to Saarthi</h2>
+                <p>
+                    Logged-in users can submit complete location details including city, state, category,
+                    travel season, description, map link, and optional coordinates. Saarthi stores these
+                    in MongoDB Atlas and merges approved entries into the browsing view.
+                </p>
+            </div>
+
+            <form id="locationForm" class="location-form">
+                <div class="form-grid">
+                    <label class="field">
+                        <span>Place name</span>
+                        <input id="placeNameInput" name="placeName" type="text" placeholder="e.g. Araku Valley" required>
+                    </label>
+
+                    <label class="field">
+                        <span>City</span>
+                        <input id="cityInput" name="city" type="text" placeholder="e.g. Visakhapatnam" required>
+                    </label>
+
+                    <label class="field">
+                        <span>State</span>
+                        <input id="stateInput" name="state" type="text" placeholder="e.g. Andhra Pradesh" required>
+                    </label>
+
+                    <label class="field">
+                        <span>Region</span>
+                        <input id="regionInput" name="region" type="text" placeholder="e.g. South India" required>
+                    </label>
+
+                    <label class="field">
+                        <span>Category</span>
+                        <select id="submitCategoryInput" name="category" required>
+                            <option value="">Choose category</option>
+                            <option value="history">History</option>
+                            <option value="nature">Nature</option>
+                            <option value="beach">Beach</option>
+                            <option value="spiritual">Spiritual</option>
+                            <option value="wildlife">Wildlife</option>
+                            <option value="city">City</option>
+                        </select>
+                    </label>
+
+                    <label class="field">
+                        <span>Best season</span>
+                        <input id="bestSeasonInput" name="bestSeason" type="text" placeholder="e.g. October to February" required>
+                    </label>
+
+                    <label class="field">
+                        <span>Image URL</span>
+                        <input id="imageUrlInput" name="imageUrl" type="url" placeholder="https://..." />
+                    </label>
+
+                    <label class="field">
+                        <span>Google Maps URL</span>
+                        <input id="mapsUrlInput" name="mapsUrl" type="url" placeholder="https://maps.google.com/..." />
+                    </label>
+
+                    <label class="field">
+                        <span>Latitude (optional)</span>
+                        <input id="latitudeInput" name="latitude" type="number" step="0.000001" placeholder="17.123456" />
+                    </label>
+
+                    <label class="field">
+                        <span>Longitude (optional)</span>
+                        <input id="longitudeInput" name="longitude" type="number" step="0.000001" placeholder="82.123456" />
+                    </label>
+                </div>
+
+                <label class="field">
+                    <span>Description</span>
+                    <textarea id="descriptionInput" name="description" rows="4" placeholder="Why should travelers visit this place?" required></textarea>
+                </label>
+
+                <div class="form-actions">
+                    <p id="locationFormFeedback" class="auth-feedback"></p>
+                    <button id="locationSubmitButton" class="search-button" type="submit">Save location details</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">Recommended Spots</p>
+                    <h2>Top 5 places for right now</h2>
+                </div>
+                <p id="statusText">Showing five compact destination picks.</p>
+            </div>
+
+            <section class="map-shell">
+                <div class="map-panel">
+                    <div class="map-copy">
+                        <p class="eyebrow">Live Map</p>
+                        <h3>Track your route with Saarthi</h3>
+                        <p id="mapStatus" class="map-status">
+                            Choose a place to load Google Maps, see your position, and draw directions from your GPS location.
+                        </p>
+                        <div class="map-actions">
+                            <button id="locateButton" class="ghost-button" type="button">Use My GPS</button>
+                            <button id="trackButton" class="primary-button" type="button">Start Live Tracking</button>
+                            <button id="stopTrackingButton" class="ghost-button hidden" type="button">Stop Tracking</button>
+                        </div>
+                    </div>
+                    <div id="mapCanvas" class="map-canvas" aria-label="Travel map"></div>
+                </div>
+            </section>
+
+            <div id="results" class="state-groups"></div>
+        </section>
+
+        <section class="faq-section">
+            <div class="section-heading section-heading-stacked">
+                <div>
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Ask Saarthi anything</h2>
+                </div>
+                <p>
+                    Quick answers to the questions a traveler usually asks before trusting a platform.
+                </p>
+            </div>
+
+            <div class="faq-chat">
+                <details class="faq-item" open>
+                    <summary class="faq-question">How does Saarthi decide which places I see first?</summary>
+                    <div class="faq-answer">
+                        If location permission is available, Saarthi tries to prioritize destinations closer to you.
+                        Otherwise, it shows a curated compact set of featured places with live weather details.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Do I need an account to explore places?</summary>
+                    <div class="faq-answer">
+                        No. You can browse destinations without logging in. An account is only needed when you want
+                        to contribute a new location or keep personalized access available.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Where does the live weather information come from?</summary>
+                    <div class="faq-answer">
+                        Saarthi fetches weather information in real time for destinations and also for the user’s
+                        current location when GPS permission is granted in the browser.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Can users add new travel places to the platform?</summary>
+                    <div class="faq-answer">
+                        Yes. Logged-in users can submit a destination with city, state, region, category,
+                        description, map link, season, and optional coordinates, and Saarthi stores that data
+                        in the backend database.
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Is Saarthi only for famous destinations?</summary>
+                    <div class="faq-answer">
+                        Not at all. The curated catalog starts with recognizable destinations, but the submission
+                        flow is meant to grow the platform with lesser-known spots as well.
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <div class="section-heading section-heading-stacked">
+                <div>
+                    <p class="eyebrow">About Saarthi</p>
+                    <h2>Built to make trip planning feel simpler</h2>
+                </div>
+                <p>
+                    Saarthi brings destination discovery, live weather, location-aware suggestions, map-ready planning,
+                    and community-added places into one cleaner travel experience. Instead of jumping between multiple
+                    sites, travelers can browse, compare, and plan from a single screen.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <article class="about-card">
+                    <h3>What Saarthi solves</h3>
+                    <p>
+                        Travel information is usually scattered across maps, blogs, weather pages, and social posts.
+                        Saarthi organizes that experience into a focused platform for discovery and planning.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <h3>What users can do</h3>
+                    <p>
+                        Search destinations, see live weather, check place details, track routes with maps,
+                        sign in, and contribute new locations that expand the travel catalog over time.
+                    </p>
+                </article>
+
+                <article class="about-card">
+                    <h3>Why it feels practical</h3>
+                    <p>
+                        The platform favors usable details over clutter: compact place tabs, state context,
+                        local weather visibility, and GPS-aware discovery that adapts to the user’s position.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="authModal" class="modal hidden" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal="true"></div>
+        <div class="modal-panel">
+            <button id="closeModalButton" class="modal-close" type="button" aria-label="Close">x</button>
+            <p class="eyebrow" id="authModalEyebrow">Welcome back</p>
+            <h3 id="authModalTitle">Login to Saarthi</h3>
+            <p class="modal-copy" id="authModalCopy">
+                Save your access and continue exploring destinations across India.
+            </p>
+
+            <form id="authForm" class="auth-form">
+                <label class="field hidden" id="nameField">
+                    <span>Full name</span>
+                    <input id="nameInput" name="name" type="text" placeholder="Enter your name">
+                </label>
+
+                <label class="field">
+                    <span>Email</span>
+                    <input id="emailInput" name="email" type="email" placeholder="you@example.com" required>
+                </label>
+
+                <label class="field">
+                    <span>Password</span>
+                    <input id="passwordInput" name="password" type="password" placeholder="Minimum 6 characters" required>
+                </label>
+
+                <p id="authFeedback" class="auth-feedback"></p>
+                <button id="authSubmitButton" class="search-button" type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <template id="placeCardTemplate">
+        <article class="place-card">
+            <img class="place-image" alt="">
+            <div class="place-body">
+                <div class="place-meta">
+                    <span class="category-pill"></span>
+                    <span class="state-pill"></span>
+                    <span class="season-pill"></span>
+                </div>
+                <div class="weather-pill weather-loading">Loading weather...</div>
+                <h3 class="place-name"></h3>
+                <p class="place-location"></p>
+                <p class="place-description"></p>
+                <div class="place-actions">
+                    <button class="track-place-button ghost-button" type="button">Track on map</button>
+                    <a class="place-link" target="_blank" rel="noreferrer">Open in Maps</a>
+                </div>
+            </div>
+        </article>
+    </template>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
