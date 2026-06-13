@@ -130,7 +130,7 @@ Create or update [.env](/C:/Users/lenovo/OneDrive/Desktop/Projects/WEB%20DEVELOP
 
 ```env
 PORT=3000
-MONGODB_URI=mongodb://saarthiUser:YOUR_PASSWORD@ac-u2i7dhw-shard-00-00.klsaagm.mongodb.net:27017,ac-u2i7dhw-shard-00-01.klsaagm.mongodb.net:27017,ac-u2i7dhw-shard-00-02.klsaagm.mongodb.net:27017/saarthi?ssl=true&replicaSet=atlas-13tx8d-shard-0&authSource=admin&retryWrites=true&w=majority
+MONGODB_URI=MONGODB_URI=your_mongodb_connection_string_here
 SESSION_SECRET=change-this-to-a-long-random-secret
 ```
 
